@@ -1,12 +1,15 @@
-import React from 'react'
-
-class Footer extends React.Component {
-  text() {
-    return `${this.props.name} - €${this.props.price}`
-  }
-  render() {
-    return <li>{this.text()}</li>;
-  }
+import { PropTypes } from "prop-types";
+import './Footer.css'
+function Footer({ company }) {
+  return (
+    <footer className="Footer">
+      {new Date().getFullYear()} © {company}
+    </footer>
+  );
 }
 
-export default Footer
+Footer.propTypes = {
+  company: PropTypes.string.isRequired,
+};
+
+export default Footer;
