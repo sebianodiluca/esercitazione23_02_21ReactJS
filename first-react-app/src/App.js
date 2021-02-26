@@ -2,6 +2,7 @@ import "./App.css";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Product from "./components/Product";
 
 const data = {
   name: "HappyShoes",
@@ -73,6 +74,9 @@ function App() {
         description={data.description}
         products={data.products}
       />
+      <Product image={data.products.image} 
+                title={data.products.title}
+                products={data.products}/>
       <Footer company={data.company} />
     </div>
   );
